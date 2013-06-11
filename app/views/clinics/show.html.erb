@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @clinic.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @clinic.name %>
+</p>
+
+<h2>Doctors</h2>
+<p><b>ID Name Operation</b></p>
+<%= render @clinic.doctors %>
+
+<h2>Add a doctor</h2>
+<%= render "doctors/form"%>
+<%= link_to 'Edit', edit_clinic_path(@clinic) %> |
+<%= link_to 'Back', clinics_path %>
