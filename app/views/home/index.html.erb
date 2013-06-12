@@ -1,2 +1,21 @@
-<h1>Home#index</h1>
-<%= link_to "Clinic", clinics_path%>
+<div class="navbar navbar-fixed-center">
+  <div class="navbar-inner">
+    <div class="container">
+    <div class="masthead">
+        <h3 class="muted">Clinic#Doctor</h3>
+    </div>
+    <hr/>
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+<!--      <%= link_to "Clinic-List", clinics_path, class: "brand" %>-->
+      <a class="btn btn-large btn-success" href="<%=clinics_path%>"><i class="icon-lock"></i>             Clinics-List             </a>
+      <div class="nav-collapse">
+        <ul class="nav">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

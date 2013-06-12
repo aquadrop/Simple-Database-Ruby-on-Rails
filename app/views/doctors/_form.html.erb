@@ -1,10 +1,22 @@
 <%= form_for([@clinic, @clinic.doctors.build]) do |f| %>
-  <div class = "field">
-    <%= f.label :name%><br />
-    <%= f.text_field :name%>
+   <% if @clinic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clinic.errors.count, "error") %> prohibited this clinic from being saved:</h2>
+
+      <ul>
+      <% @clinic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="field">
+     <%= f.label :name, class: "control-lable"%>
+     <%= f.text_field :name%>
   </div>
-  <div class = "actions">
-    <%= f.submit%>
+  <div class ="field">
+     <%=f.submit%>
   </div>
+
 <%end%>
 

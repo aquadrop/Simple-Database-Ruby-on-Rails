@@ -1,6 +1,6 @@
-<p>
-   <%= doctor.id%>
-   <%= doctor.name %>
-   <%= link_to 'Delete', [doctor.clinic, doctor], :confirm => 'Are you sure', :method => :delete%>
-   <%= link_to 'Edit', edit_clinic_doctor_path(doctor.clinic, doctor)%>
-</p>
+<tr>
+   <td><%= doctor.id%></td>
+   <td><%= doctor.name %></td>
+   <td><%= link_to 'Delete', [doctor.clinic, doctor], :confirm => 'Are you sure', :method => :delete%></td>
+   <td><%= link_to 'Edit', edit_clinic_doctor_path(doctor.clinic, doctor)%></td>
+</tr>
